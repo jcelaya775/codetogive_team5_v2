@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+TO DO:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [x] Database
+- [ ] REST API
+- [ ] Frontend
+- [ ] ML Algorithm
+- [ ] Unity Gamification (optional)
+- [ ] Deployment (optional)
 
 ## Available Scripts
 
