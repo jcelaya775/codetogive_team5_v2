@@ -14,10 +14,10 @@ const mentors = require('./routes/api/mentors');
 const app = express();
 
 // connect to database
-const url = process.env.URL;
-mongoose.connect(url)
-  .then(() => console.log('MongoDB connected...'))
-  .catch(err => console.log(err));
+// const url = process.env.URL;
+// mongoose.connect(url)
+//   .then(() => console.log('MongoDB connected...'))
+//   .catch(err => console.log(err));
 
 // Bodyparse middleware
 app.use(cors());
@@ -49,5 +49,5 @@ child.on('close', (code) => {
 });
 
 // Launch server
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Listening on ${port}`));
