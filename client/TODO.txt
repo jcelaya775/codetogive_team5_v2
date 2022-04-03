@@ -1,0 +1,47 @@
+[ ] Navbar
+    - [ ] Home, Pairing, Forum Links
+    - [ ] Profile + Login/Sign up button
+    - [ ] Notifications
+[ ] Profile Page (optional)
+    - [ ] Update info (email, name, etc.)
+    - [ ] Change avatar
+    - [ ] Resubmit questionnare
+[ ] Home Page
+    - [ ] Banner/Hero Section
+    - [ ] Log in 
+    - [ ] Posts
+[x] Login Page
+[ ] Sign up Page
+    - [ ] Are you a mentor or student?
+    - [ ] Mentor and Mentee Sign up pages
+        - [ ] Mentee: Questionnarre
+        - [ ] Mentor: Declare area
+[x] Questionnarre
+    - [x] Scale
+    - [x] Layout
+    - [x] Questions
+[ ] Dashboard (optional)
+    - [ ] Mentor/Mentee Connection List
+    - [ ] Meetings (optional)
+    - [ ] 
+[ ] Pairing Page
+    - [ ] Pagination
+    - [ ] Mentor Card
+        - [ ] Description
+        - [ ] Pair button
+    - [ ] Filter (optional)
+    - [ ] Search (optional)
+[ ] Forum Page
+    - [ ] Post
+        - [ ] Profile avatar
+        - [ ] Title
+        - [ ] Date (optional)
+        - [ ] Content
+        - [ ] Like + Share (optional) buttons
+        - [ ] Comments
+    - [ ] Filter (optional)
+    - [ ] Search (optional)
+[ ] Footer
+    - [ ] Contact, Source code, Social Media Links
+    - [ ] Logo (optional)
+    - [ ] Back to top (optional)
