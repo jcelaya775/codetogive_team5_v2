@@ -3,14 +3,27 @@ const Schema = mongoose.Schema;
 
 const MentorSchema = Schema({
     mentorId: Number,
-    password: String,
     email: String,
+    password: String,
+    rememberLogin: Boolean,
     firstName: String,
     lastName: String,
     age: Number,
-    school: String,
+    company: String,
+    avatar: { // profile picture
+        data: Buffer,
+        contentType: String
+    },
+
     label: String,
-    menteeId: [{ type: String }]
+    mentorId: Number,
+    posts: [{
+        title: String,
+        date: String,
+        img: { data: Buffer, contentType: String },
+        text: String,
+        comments: [{ userId: Number, text: String }]
+    }]
 });
 
 module.exports = Mentor = mongoose.model('Mentor', MentorSchema);

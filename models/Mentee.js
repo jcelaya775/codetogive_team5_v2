@@ -4,14 +4,29 @@ const Schema = mongoose.Schema;
 const MenteeSchema = new Schema(
     {
         menteeId: Number,
-        password: String,
         email: String,
+        password: String,
+        rememberLogin: Boolean,
         firstName: String,
         lastName: String,
         age: Number,
         school: String,
+        avatar: { // profile picture
+            data: Buffer,
+            contentType: String
+        },
+        responses: {
+            // insert question responses here
+        },
         label: String,
-        mentorId: Number
+        mentorId: Number,
+        posts: [{
+            title: String,
+            date: String,
+            img: { data: Buffer, contentType: String },
+            text: String,
+            comments: [{ userId: Number, text: String }]
+        }]
     }
 );
 

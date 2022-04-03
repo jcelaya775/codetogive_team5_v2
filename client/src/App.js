@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ProgressBar from './components/ProgressBar'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Typography from '@mui/material/Typography'
 import Home from './components/Home'
 import Questionnarre from './components/Questionnarre'
 

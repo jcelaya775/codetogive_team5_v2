@@ -14,6 +14,15 @@ router.get('/', (req, res) => {
 // @desc    Create a user
 // @accss   Public (usually private if using authentication)
 router.post('/', async (req, res) => {
+    // For post dates:
+    // Mentee
+    // .find()
+    // .forEach(function (doc) {
+    // d = doc._id.getTimestamp(); 
+    // print(d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate() + " " + d.getHours() + ":" +
+    //  d.getMinutes() + ":" + d.getSeconds())
+    // })
+
     // const newMentor = new Mentor({});
     // try {
     //     mentor = await newMentor.save();
