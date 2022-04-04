@@ -5,8 +5,12 @@
 
 
 #import libraries
+from sklearn import metrics
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 import numpy as np
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import pandas as pd
 import sklearn
 
@@ -14,42 +18,42 @@ import sklearn
 # In[10]:
 
 
-#PULL DATA
+# PULL DATA
 
-#pull class list
+# pull class list
 
-#for now
+# for now
 careerFieldList = ['consulting', 'biotech', 'fintech']
 
-#pull dataset
+# pull dataset
 
-#for now
+# for now
 
 
 # In[11]:
 
 
-#format dataset
+# format dataset
 
-#make headers
+# make headers
 headers = ['userID']
 for careerField in careerFieldList:
     headers.append(careerField + '-explicit')
     headers.append(careerField + '-implicit')
-    
-#read csv
-#for now
+
+# read csv
+# for now
 
 dataset = pd.read_csv("data.csv")
 dataset.head(20)
 
-#TODO 
+# TODO
 
 
 # In[12]:
 
 
-#get values
+# get values
 x = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
 
@@ -57,16 +61,14 @@ y = dataset.iloc[:, -1].values
 # In[13]:
 
 
-#train/test split
-from sklearn.model_selection import train_test_split
+# train/test split
 xTrain, xTest, yTrain, yTest = train_test_split(x, y, test_size=0.1)
 
 
 # In[14]:
 
 
-#scale values
-from sklearn.preprocessing import StandardScaler
+# scale values
 
 scaler = StandardScaler()
 scaler.fit(x)
@@ -76,8 +78,7 @@ x = scaler.transform(x)
 # In[15]:
 
 
-#fit model
-from sklearn.neighbors import KNeighborsClassifier
+# fit model
 
 classifier = KNeighborsClassifier(n_neighbors=5)
 classifier.fit(xTrain, yTrain)
@@ -86,8 +87,7 @@ classifier.fit(xTrain, yTrain)
 # In[16]:
 
 
-#test
-from sklearn import metrics
+# test
 predictions = classifier.predict(xTest)
 
 print('INPUT')
@@ -107,8 +107,8 @@ print(metrics.classification_report(yTest, predictions))
 # In[29]:
 
 
-#manual testing
-exampleInput = [[5,25,9,20,7,5]]
+# manual testing
+exampleInput = [[5, 25, 9, 20, 7, 5]]
 singlePrediction = classifier.predict(exampleInput)
 probabilities = classifier.predict_proba(exampleInput)
 
@@ -116,4 +116,3 @@ print('INTERESTS w/ PROBABILITIES')
 classes = classifier.classes_
 print(classes)
 print(probabilities)
-

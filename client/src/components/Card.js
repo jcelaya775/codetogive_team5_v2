@@ -25,7 +25,7 @@ export default function ImgMediaCard() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
+                <Button size="small">Connect</Button>
                 <Button size="small">Learn More</Button>
             </CardActions>
         </Card>

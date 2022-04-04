@@ -59,7 +59,7 @@ router.delete('/:id', (req, res) => {
 // middleware function to run python script
 const runModel = (req, res, next) => {
   // note: responses should be in the form of an array
-  const child = spawn('python', ['../../python/process.py', JSON.stringify(req.body.responses)])
+  const child = spawn('python', ['../../python/interest-classifier.py', JSON.stringify(req.body.responses)])
 
   child.stdout.on('data', (data) => {
     const str = data.toString().replace(/'/g, `"`)
