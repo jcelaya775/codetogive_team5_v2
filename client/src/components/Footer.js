@@ -20,35 +20,33 @@ function Copyright() {
 
 export default function StickyFooter() {
   return (
-    <div className='pt-12'>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '0vh',
+      }}
+    >
+      <CssBaseline />
       <Box
+        component='footer'
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '0vh',
+          py: 3,
+          px: 2,
+          mt: 'auto',
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'light'
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
         }}
       >
-        <CssBaseline />
-        <Box
-          component='footer'
-          sx={{
-            py: 3,
-            px: 2,
-            mt: 'auto',
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[200]
-                : theme.palette.grey[800],
-          }}
-        >
-          <Container maxWidth='sm'>
-            <Typography variant='body1'>
-              My sticky footer can be found here.
-            </Typography>
-            <Copyright />
-          </Container>
-        </Box>
+        <Container maxWidth='sm'>
+          <Typography variant='body1'>
+            AlphaPair
+          </Typography>
+          <Copyright />
+        </Container>
       </Box>
-    </div>
+    </Box>
   )
 }

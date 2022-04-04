@@ -1,9 +1,17 @@
 import React from 'react'
+import Card from '../components/Card'
 
 export default function Pair() {
   return (
-    <div>
-      <h1>Pair</h1>
+    <div className='container w-fit mx-auto flex flex-wrap gap-6'>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   )
 }

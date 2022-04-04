@@ -6,7 +6,7 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
 
-export default function AlertDialog({ label }) {
+export default function AlertDialog({ label, onSubmit }) {
   const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {
@@ -39,7 +39,7 @@ export default function AlertDialog({ label }) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose} autoFocus>
+          <Button onClick={onSubmit} autoFocus>
             I'm Sure
           </Button>
         </DialogActions>

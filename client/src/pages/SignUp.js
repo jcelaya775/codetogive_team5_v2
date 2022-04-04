@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -22,7 +23,7 @@ function Copyright(props) {
       {...props}
     >
       {'Copyright © '}
-      <Link color='inherit' href='https://mui.com/'>
+      <Link color='inherit' href='/main/forum'>
         AlphaPair
       </Link>{' '}
       {new Date().getFullYear()}
@@ -34,13 +35,33 @@ function Copyright(props) {
 const theme = createTheme()
 
 export default function SignUp() {
+  const navigate = useNavigate()
+
   const handleSubmit = (event) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    })
+
+    console.log(data)
+    console.log(data.get('firstName'))
+    console.log(data.get('lastName'))
+    console.log(data.get('password'))
+
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: data.get('firstName'),
+        lastName: data.get('lastName'),
+        password: data.get('password'),
+        email: data.get('email'),
+      })
+    }
+
+    fetch('http://localhost:5000/api/mentees', options)
+      .then(res => res.json())
+      .then(json => console.log(json))
+      .then(() => navigate('/main'))
+      .catch(() => console.log('error has occured while signing in!'))
   }
 
   return (

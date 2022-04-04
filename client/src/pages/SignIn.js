@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -22,8 +23,8 @@ function Copyright(props) {
       {...props}
     >
       {'Copyright © '}
-      <Link color='inherit' href='https://mui.com/'>
-        Your Website
+      <Link color='inherit' href='#'>
+        AlphaPair
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -34,13 +35,28 @@ function Copyright(props) {
 const theme = createTheme()
 
 export default function SignInSide() {
+  const navigate = useNavigate()
+  const [error, setError] = React.useState()
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    const data = new FormData(event.currentTarget)
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    })
+
+    navigate('/main/pair')
+    // const data = new FormData(event.currentTarget)
+    // const options = {
+    //   method: 'GET',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: {
+    //     email: data.get('email'),
+    //     password: data.get('password')
+    //   }
+    // }
+
+    // fetch('http://localhost:5000/api/mentees/{email}', options)
+    //   .then(res => res.json())
+    //   .then(json => console.log(json))
+    //   .then(() => navigate('/main/forum'))
+    //   .catch(() => setError(true))
   }
 
   return (

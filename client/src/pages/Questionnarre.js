@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Question from '../components/Question'
 import Typography from '@mui/material/Typography'
 import Confirm from '../components/Confirm'
+import { useNavigate } from 'react-router-dom'
 
 const questions = [
   `On a
@@ -33,9 +34,35 @@ scale from 1 to 10, how much are you interested in Software?`,
 ]
 
 export default function () {
-  const [submitted, setSubmitted] = useState(false)
+  const [data, setData] = useState([])
+  const navigate = useNavigate()
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    navigate('/main/pair')
+    // const data = new FormData(event.currentTarget)
+    // const options = {
+    //   method: 'GET',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: {
+    //     email: data.get('email'),
+    //     password: data.get('password')
+    //   }
+    // }
+
+    // fetch('http://localhost:5000/api/mentees/{email}', options)
+    //   .then(res => res.json())
+    //   .then(json => console.log(json))
+    //   .then(() => navigate('/main/forum'))
+  }
 
   return (
+    // <div className='container mx-auto px-10 py-12'>
+    //     <div className='py-10'>
+    //       <Questionnarre />
+    //     </div>
+    //   </div>
     <div className='container border-2 p-10 rounded-xl shadow-lg m-auto py-10 text-center max-w-xl'>
       <Typography variant='h2' component='h1' gutterBottom>
         Welcome to AlphaPair!
@@ -49,12 +76,12 @@ export default function () {
 
       <div className='text-left'>
         {questions.map((question, id) => (
-          <Question key={id} text={question} />
+          <Question key={id} text={question} data={data} />
         ))}
       </div>
 
       <div className='container py-10 text-center'>
-        <Confirm label='Submit' />
+        <Confirm label='Submit' onSubmit={handleSubmit} />
       </div>
     </div>
   )

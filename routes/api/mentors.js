@@ -3,36 +3,44 @@ const router = express.Router();
 
 const Mentor = require('../../models/Mentor');
 
-// @route   GET api/users
-// @desc    Get all users
+// Mentee
+// .find()
+// .forEach(function (doc) {
+// d = doc._id.getTimestamp(); 
+// print(d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate() + " " + d.getHours() + ":" +
+//  d.getMinutes() + ":" + d.getSeconds())
+// })
+
+// @route   GET api/mentors
+// @desc    Get all mentors
 // @accss   Public
 router.get('/', (req, res) => {
-    // retrieve all users
+    // retrieve all mentors
 });
 
-// @route   POST api/users
-// @desc    Create a user
+// @route   POST api/mentors
+// @desc    Create a new mentor
 // @accss   Public (usually private if using authentication)
-router.post('/', async (req, res) => {
-    // For post dates:
-    // Mentee
-    // .find()
-    // .forEach(function (doc) {
-    // d = doc._id.getTimestamp(); 
-    // print(d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate() + " " + d.getHours() + ":" +
-    //  d.getMinutes() + ":" + d.getSeconds())
-    // })
+router.post('/:id', async (req, res, nex) => {
+    const newMentor = new Mentor({
+        mentorId: req.body.mentorId,
+        email: req.body.email,
+        password: req.body.password,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        age: req.body.age,
+        company: req.body.compnany,
+    });
 
-    // const newMentor = new Mentor({});
-    // try {
-    //     mentor = await newMentor.save();
-    //     res.json(mentor);
-    // } catch (e) {
-    //     return next(e);
-    // }
+    try {
+        const mentor = await newMentor.save();
+        res.json(mentor);
+    } catch (e) {
+        return next(e);
+    }
 });
 
-// @route   DELETE api/users/id
+// @route   DELETE api/mentors/id
 // @desc    Delete a user
 // @accss   Public (usually private if using authentication)
 router.delete('/:id', (req, res) => {
