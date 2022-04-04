@@ -2,8 +2,8 @@ TO DO:
 
 - [x] Database
 - [ ] REST API
-- [ ] Frontend
-- [ ] ML Algorithm
+- [x] Frontend
+- [x] ML Algorithm
 - [ ] Unity Gamification (optional)
 - [ ] Deployment (optional)
 
