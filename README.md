@@ -1,7 +1,12 @@
 ## Screenshots
 
-![login](screenshots/login.png)  
-![pairing](screenshots/pairing.png)
+![login](screenshots/login.png)\
+
+![questionnare](screenshots/questionnarre.png)\
+
+![pairing](screenshots/pairing.png)\
+
+<br/>
 
 TO DO:
 
