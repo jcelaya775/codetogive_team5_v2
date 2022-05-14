@@ -1,6 +1,6 @@
 ## Screenshots
 
-![login](screenshots/login.png)
+![login](screenshots/login.png)  
 ![pairing](screenshots/pairing.png)
 
 TO DO:
