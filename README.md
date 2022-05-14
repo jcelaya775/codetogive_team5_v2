@@ -1,10 +1,10 @@
 ## Screenshots
 
-![login](screenshots/login.png)\
+![login](screenshots/login.png)<br/>
 
-![questionnare](screenshots/questionnarre.png)\
+![questionnare](screenshots/questionnarre.png)<br/>
 
-![pairing](screenshots/pairing.png)\
+![pairing](screenshots/pairing.png)<br/>
 
 <br/>
 
