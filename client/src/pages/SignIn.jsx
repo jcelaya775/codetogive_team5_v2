@@ -42,15 +42,15 @@ export default function SignInSide() {
     event.preventDefault()
 
     navigate('/main/pair')
-    // const data = new FormData(event.currentTarget)
-    // const options = {
-    //   method: 'GET',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: {
-    //     email: data.get('email'),
-    //     password: data.get('password')
-    //   }
-    // }
+    const data = new FormData(event.currentTarget)
+    const options = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+      body: {
+        email: data.get('email'),
+        password: data.get('password')
+      }
+    }
 
     // fetch('http://localhost:5000/api/mentees/{email}', options)
     //   .then(res => res.json())

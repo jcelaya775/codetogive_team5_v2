@@ -14,7 +14,7 @@
     "react-scripts": "5.0.0"
   },
   "scripts": {
-    "client-install": "npm install --prefix client",
+    "client-install": "npm install --legacy-peer-deps --prefix client",
     "build": "react-scripts build",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
   }
 }

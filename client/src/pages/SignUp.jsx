@@ -41,11 +41,6 @@ export default function SignUp() {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
 
-    console.log(data)
-    console.log(data.get('firstName'))
-    console.log(data.get('lastName'))
-    console.log(data.get('password'))
-
     const options = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -57,11 +52,13 @@ export default function SignUp() {
       })
     }
 
-    fetch('http://localhost:5000/api/mentees', options)
-      .then(res => res.json())
-      .then(json => console.log(json))
-      .then(() => navigate('/main'))
-      .catch(() => console.log('error has occured while signing in!'))
+    console.log(options)
+
+    // fetch('http://localhost:5000/api/mentees', options)
+    //   .then(res => res.json())
+    //   .then(json => console.log(json))
+    //   .then(() => navigate('/main'))
+    //   .catch(() => console.log('error has occured while signing in!'))
   }
 
   return (
