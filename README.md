@@ -1,3 +1,8 @@
+## Screenshots
+
+![login](screenshots/login.png)
+![pairing](screenshots/pairing.png)
+
 TO DO:
 
 - [x] Database
