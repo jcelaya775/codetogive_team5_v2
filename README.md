@@ -17,7 +17,7 @@ Installs all dependencies needed by the backend server (express.js).
 
 ### `npm run client-install`
 
-Installs all dependencies needed by the frontend client (react).\
+Installs all dependencies needed by the frontend client (react).
 
 ### `npm run dev`
 

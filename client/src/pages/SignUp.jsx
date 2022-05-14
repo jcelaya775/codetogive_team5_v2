@@ -49,7 +49,7 @@ export default function SignUp() {
         lastName: data.get('lastName'),
         password: data.get('password'),
         email: data.get('email'),
-      })
+      }),
     }
 
     console.log(options)
@@ -59,6 +59,7 @@ export default function SignUp() {
     //   .then(json => console.log(json))
     //   .then(() => navigate('/main'))
     //   .catch(() => console.log('error has occured while signing in!'))
+    navigate('/main')
   }
 
   return (

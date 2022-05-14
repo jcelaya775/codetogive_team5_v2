@@ -11,7 +11,7 @@ export default function Main() {
   return (
     <div>
       <Navbar />
-      <div className='container mx-auto py-16'>
+      <div className='container mx-auto py-16 px-4 md:px-6 lg:px-8'>
         <Routes>
           <Route path='/' element={<Questionnarre />} />
           <Route path='/pair' element={<Pair />} />

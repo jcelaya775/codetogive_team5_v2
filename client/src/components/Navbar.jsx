@@ -74,9 +74,7 @@ export default function SearchAppBar() {
             component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <Link to='/main/pair'>
-              AlphaPair
-            </Link>
+            <Link to='/main/forum'>AlphaPair</Link>
           </Typography>
 
           <Search>

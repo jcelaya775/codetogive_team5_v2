@@ -34,7 +34,7 @@ function Copyright(props) {
 
 const theme = createTheme()
 
-export default function SignInSide() {
+export default function SignIn() {
   const navigate = useNavigate()
   const [error, setError] = React.useState()
 
@@ -48,9 +48,11 @@ export default function SignInSide() {
       headers: { 'Content-Type': 'application/json' },
       body: {
         email: data.get('email'),
-        password: data.get('password')
-      }
+        password: data.get('password'),
+      },
     }
+
+    console.log(options)
 
     // fetch('http://localhost:5000/api/mentees/{email}', options)
     //   .then(res => res.json())
